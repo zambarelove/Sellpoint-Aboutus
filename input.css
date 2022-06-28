@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply hover:bg-slate-400 bg-slate-800 rounded-lg py-2 px-8 text-white font-bold m-5
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    body{
+        @apply 
+        text-sm leading-6 text-[#808080]
+        scroll-smooth transition-all duration-1000;
+    }
+    
+    /*  Comman Css */
+    .section__wrapper{
+        @apply pt-12 md:pt-20 lg:pt-16 xl:pt-32;
+    }
+    .container{
+        @apply px-4 font-sans;
+    }
+    .years, .collection, .fashion__brand, .testimonial__card__wrapper{
+        @apply max-w-6xl mx-auto;
+    }
+    .black___btn{
+        @apply 
+        uppercase text-xs
+      text-white bg-[#232323] hover:bg-white hover:text-[#232323]
+        border-2 border-transparent hover:border-black
+        py-1 px-4 inline-block;
+    }
+
+    /* Hero Section Css */
+    header{
+        @apply h-[376px] md:h-[405px] lg:h-[486px] relative;
+    }
+    .hero__bg{
+        @apply w-full h-full bg-no-repeat bg-cover;
+        background-image: url('https://hongo.b-cdn.net/wp-content/uploads/2019/05/our-brands-img-18.jpg');
+        background-position: 50% 0%;
+    }
+    .hero__overlay{
+        @apply 
+        w-full h-full 
+      bg-[#232323] opacity-80 
+        absolute top-0 left-0 right-0 bottom-0;
+    }
+    .hero__content{
+        @apply 
+        pt-[72px] lg:pt-16
+        flex flex-col-reverse lg:gap-5 
+        absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 ;
+    }
+    .hero__title{
+        @apply 
+        mt-4 lg:mt-0
+        text-3xl md:text-[45px] font-semibold text-white md:tracking-tighter text-center;
+    }
+    .hero__subTitle{
+        @apply
+        py-1.5 
+        w-56 mx-auto
+        text-xs leading-[10px] text-center tracking-tighter text-white bg-[#f57250];
+    }
+
+    /* Section Css */
+    .section__header{
+        @apply flex flex-col-reverse gap-3 lg:gap-5;
+    }
+    .section__title{
+        @apply 
+        text-xl md:text-2xl text-center font-medium text-[#232323] sm:w-8/12 lg:w-2/4 mx-auto;
+    }
+    .section__uniqueText-1{
+        @apply 
+        relative
+        text-sm text-center font-semibold text-[#f57250] 
+        before:w-4 before:h-px before:absolute before:content-[''] before:top-2.5 before:left-2.5 sm:before:left-48 before:md:left-[260px] before:lg:left-[380px] before:xl:left-[510px] before:inline-block before:bg-[#f57250]
+        after:w-4 after:h-px after:absolute after:top-2.5 after:right-0 sm:after:right-48 after:md:right-[260px] after:lg:right-[380px] after:xl:right-[510px] after:inline-block after:bg-[#f57250];
+    }
+    .section__uniqueText-2{
+        @apply text-sm text-center lg:text-left font-semibold text-[#f57250] mb-1.5;
+    }
+    .sub__title{
+        @apply text-sm font-medium text-[#232323];
+    }
+
+
+    /*  History Services Css  */
+    .history__image__grid{
+        @apply 
+        grid
+        grid-cols-2 sm:grid-rows-2 gap-4 2xl:gap-10
+        md:grid-cols-4 md:grid-rows-1
+        px-4 xl:pt-24 
+        ;
+    }
+    .history__image__wrapper{
+        @apply overflow-hidden;
+    }
+    .services{
+        @apply 
+        container mx-auto 
+        grid grid-cols-1 lg:grid-cols-3 gap-5 xl:gap-8
+        py-12 md:py-20 lg:py-16 xl:py-32 ;
+    }
+    .services__header{
+        @apply lg:w-3/4 mx-auto;
+    }
+    .history .section__uniqueText-1{
+        @apply before:left-5 after:right-5 sm:before:left-44 sm:after:right-44 md:before:left-60 md:after:right-60 lg:before:left-[360px] lg:after:right-[360px] xl:before:left-[490px] xl:after:right-[490px];
+    }
+    .services__card__wrapper{
+        @apply grid sm:grid-cols-2 gap-5 sm:gap-8 md:gap-14 ;
+    }
+    .service__card{
+        @apply flex items-start gap-5 md:gap-8;
+    }
+    .services .section__title{
+        @apply sm:w-8/12 sm:mx-auto lg:w-full lg:text-left mb-5;
+    }
+    .service__card .comman__text{
+        @apply 
+        text-center lg:text-left
+        sm:w-10/12 xl:w-3/4;
+    }
+    .service__card__title{
+        @apply 
+        mb-1
+        text-[13px] text-[#232323] font-medium;
+    }
+
+    /* parallax Css */
+    .parallax__1{
+        @apply 
+        relative py-80
+        bg-fixed bg-center bg-cover;
+        background-image: url('https://hongo.b-cdn.net/wp-content/uploads/2019/05/fashion-about-classic-para-bg-1.jpg?id=33678');
+    }
+    .parallax__1__overlay{
+        @apply absolute top-0 left-0 bg-black opacity-60 w-full h-full;
+    }
+    .parallax__content__wrapper{
+        @apply
+        bg-white text-center
+        w-11/12 md:w-10/12 lg:w-8/12 xl:max-w-3xl mx-auto
+        p-7 md:py-16 space-y-4 
+        rounded-lg absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+    }
+    .parallax__1 .section__title{
+        @apply sm:w-5/6 lg:w-9/12 mx-auto;
+    }
+    .parallax__1 .comman__text{
+        @apply w-11/12 md:w-10/12 lg:w-9/12 mx-auto text-center;
+    }
+    .parallax__content__wrapper .section__uniqueText-1{
+        @apply md:w-11/12 mx-auto;
+    }
+    .section__uniqueText-1{
+        @apply before:left-24 lg:before:left-32 after:right-24 lg:after:right-32 xl:before:left-40 xl:after:right-40;
+    }
+
+    .years{
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-7 sm:gap-5;
+    }
+    .year__card{
+        @apply text-center px-4;
+    }
+    .year__card__black__round{
+        @apply 
+        w-[90px] h-[90px] mx-auto 
+        border-2 border-transparent
+        flex justify-center items-center
+      bg-[#242424] group-hover:bg-white group-hover:border-[#242424]
+        duration-700 rounded-full mb-2.5 sm:mb-8;
+    }
+    .year__card__title{
+        @apply text-white font-bold text-lg group-hover:text-[#242424];
+    }
+    .year__card p{
+        @apply  md:w-full lg:w-3/4 mx-auto;
+    }
+
+    /* Image__grid__2 Css */
+    .image__grid__2{
+        @apply grid grid-cols-2 md:grid-cols-3 gap-4 mt-2.5 px-4;
+    }
+
+    /* collection Css */
+    .collection{
+        @apply 
+        grid grid-cols-1 md:grid-cols-3 gap-5 
+        py-12 md:py-20 lg:py-16 xl:py-32 px-4 lg:px-12;
+    }
+    .collection__card__header{
+        @apply flex items-center gap-4;
+    }
+    .collection__header__divider{
+        @apply w-px h-6 bg-[#e2e2e2];
+    }
+    .collection .section__uniqueText-2{
+        @apply text-3xl;
+    }
+    .collection__card .collection__card__description{
+        @apply text-[13px] lg:w-3/4 mt-4;
+    }
+
+    .parallax-2{ 
+        @apply
+        relative
+        py-48  sm:py-60 
+        bg-center bg-cover bg-no-repeat bg-fixed;
+        background-image: url('https://hongo.b-cdn.net/wp-content/uploads/2019/05/fashion-about-classic-bg.jpg?id=32895');
+    }
+    .parallax__2__overlay{
+        @apply
+        w-full h-full 
+        absolute top-0 left-0 right-0 
+        bg-[#232323] opacity-80;
+    }
+    .parallax__2__title{
+        @apply 
+        text-5xl sm:text-8xl text-white font-bold uppercase
+        absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+    }
+
+    /* Fashion Brand Css */
+
+    .fashion__brand{
+        @apply 
+        px-4
+        py-12 md:py-20 lg:py-16 xl:py-32
+        grid grid-cols-1 md:grid-cols-2 lg:gap-x-10 xl:gap-x-24;
+    }
+    .fashion__brand__content{
+        @apply pt-5 sm:py-8 md:px-6 xl:px-14 ;
+    }
+    .fashion__brand .fashion__brand__content{
+        @apply text-left;
+    }
+    .fashion__brand__content .section__title{
+        @apply w-full text-left my-2.5 ;
+    }
+    .fashion__brand__content .section__uniqueText-2{
+        @apply text-xs before:w-0 after:w-0 text-left;
+    }
+    .fashion__brand__content p{
+        @apply my-4;
+    }
+    .fashion__brand__content .black___btn{
+        @apply mt-2.5 tracking-tight ;
+    }
+
+    .testimonial{
+        @apply 
+        bg-[#F7F7F7] px-4 
+        py-12 md:py-20 lg:py-16 xl:py-32;
+    }
+    .testimonial__content{
+        @apply py-6 text-center bg-white;
+    }
+    .testimonial__card__wrapper{
+        @apply grid grid-cols-2 md:grid-cols-4 gap-5;
+    }
+    .testimonial__card__header{
+        @apply relative overflow-hidden;
+    }
+    .testimonial__overlay{
+        @apply  
+        w-full h-full 
+        group-hover:bottom-0
+        absolute left-0 -bottom-full 
+        bg-[#f57250] opacity-90 duration-300;
+    }
+    .testimonial__card__title{
+        @apply text-xs font-medium text-[#232323];
+    }
+    .testimonial__card__subTitle{
+        @apply text-[11px] text-[#808080];
+    }
+    .testimonial__social__link{
+        @apply text-white flex gap-x-5 justify-center items-center h-full;
+    }
+
+    .partners{
+        @apply 
+        2xl:max-w-7xl mx-auto
+        py-12 md:py-20 lg:py-16 xl:py-32 px-4 sm:px-16 lg:px-44 2xl:px-28
+        grid grid-cols-2 sm:grid-cols-4 gap-10 place-content-center;
+    }
+}
