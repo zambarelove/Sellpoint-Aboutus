@@ -34,6 +34,9 @@
         border-2 border-transparent hover:border-black
         py-1 px-4 inline-block;
     }
+    .service__card .fa-bag-shopping, .fa-umbrella, .fa-gift, .fa-star{
+        @apply text-[#f57250] text-xl sm:text-2xl lg:text-3xl;
+    }
 
     /* Hero Section Css */
     header{
@@ -84,7 +87,7 @@
         after:w-4 after:h-px after:absolute after:top-2.5 after:right-0 sm:after:right-48 after:md:right-[260px] after:lg:right-[380px] after:xl:right-[510px] after:inline-block after:bg-[#f57250];
     }
     .section__uniqueText-2{
-        @apply text-sm text-center lg:text-left font-semibold text-[#f57250] mb-1.5;
+        @apply text-xs text-center lg:text-left font-semibold text-[#f57250] mb-1.5;
     }
     .sub__title{
         @apply text-sm font-medium text-[#232323];
@@ -103,6 +106,10 @@
     .history__image__wrapper{
         @apply overflow-hidden;
     }
+    .history .section__uniqueText-1{
+        @apply
+        before:left-5 after:right-5 sm:before:left-44 sm:after:right-44 md:before:left-60 md:after:right-60 lg:before:left-[360px] lg:after:right-[360px] xl:before:left-[490px] xl:after:right-[490px];
+    }
     .services{
         @apply 
         container mx-auto 
@@ -112,9 +119,7 @@
     .services__header{
         @apply lg:w-3/4 mx-auto;
     }
-    .history .section__uniqueText-1{
-        @apply before:left-5 after:right-5 sm:before:left-44 sm:after:right-44 md:before:left-60 md:after:right-60 lg:before:left-[360px] lg:after:right-[360px] xl:before:left-[490px] xl:after:right-[490px];
-    }
+    .services__header 
     .services__card__wrapper{
         @apply grid sm:grid-cols-2 gap-5 sm:gap-8 md:gap-14 ;
     }
@@ -124,9 +129,12 @@
     .services .section__title{
         @apply sm:w-8/12 sm:mx-auto lg:w-full lg:text-left mb-5;
     }
-    .service__card .comman__text{
+    .services__header p{
+        @apply text-center ;
+    }
+    .service__card p{
         @apply 
-        text-center lg:text-left
+        lg:text-left
         sm:w-10/12 xl:w-3/4;
     }
     .service__card__title{
@@ -138,7 +146,7 @@
     /* parallax Css */
     .parallax__1{
         @apply 
-        relative py-80
+        relative py-80 sm:py-60 md:py-80
         bg-fixed bg-center bg-cover;
         background-image: url('https://hongo.b-cdn.net/wp-content/uploads/2019/05/fashion-about-classic-para-bg-1.jpg?id=33678');
     }
@@ -147,22 +155,33 @@
     }
     .parallax__content__wrapper{
         @apply
-        bg-white text-center
-        w-11/12 md:w-10/12 lg:w-8/12 xl:max-w-3xl mx-auto
-        p-7 md:py-16 space-y-4 
+        bg-white text-center opacity-95
+        w-[95%] md:w-10/12 lg:w-8/12 xl:max-w-3xl mx-auto
+        py-7 sm:px-5 sm:p-16 md:py-16 
         rounded-lg absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
     }
     .parallax__1 .section__title{
-        @apply sm:w-5/6 lg:w-9/12 mx-auto;
+        @apply 
+        sm:w-11/12 md:w-10/12 lg:w-9/12 
+        mx-auto mb-5 mt-2.5;
     }
-    .parallax__1 .comman__text{
-        @apply w-11/12 md:w-10/12 lg:w-9/12 mx-auto text-center;
+    .parallax__1 p{
+        @apply w-11/12 md:w-11/12 lg:w-10/12 mx-auto text-center;
     }
     .parallax__content__wrapper .section__uniqueText-1{
         @apply md:w-11/12 mx-auto;
     }
-    .section__uniqueText-1{
-        @apply before:left-24 lg:before:left-32 after:right-24 lg:after:right-32 xl:before:left-40 xl:after:right-40;
+    .parallax__content__wrapper .section__uniqueText-1{
+        @apply 
+        before:top-2/4 after:top-2/4 
+        before:-left-2.5 after:-right-2.5
+        sm:before:left-24 sm:after:right-24
+        md:before:left-28 md:after:right-28
+        lg:before:left-32 lg:after:right-32
+        xl:before:left-44 xl:after:right-44 ;
+    }
+    .parallax__content__wrapper .black___btn{
+        @apply mt-5 px-5 py-1.5;
     }
 
     .years{
@@ -294,5 +313,8 @@
     }
     .partner__img__overlay{
         @apply w-full h-full absolute top-0 left-0 bg-gray-100 group-hover:block hidden opacity-20;
+    }
+    .partner__link{
+        @apply relative;
     }
 }
