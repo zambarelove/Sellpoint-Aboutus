@@ -119,7 +119,12 @@
     .services__header{
         @apply lg:w-3/4 mx-auto;
     }
-    .services__header 
+    .services__header .section__uniqueText-2{
+        @apply text-left;
+    }
+    .services__header .comman__text{
+        @apply text-left ;
+    }
     .services__card__wrapper{
         @apply grid sm:grid-cols-2 gap-5 sm:gap-8 md:gap-14 ;
     }
