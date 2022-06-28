@@ -120,22 +120,22 @@
         @apply lg:w-3/4 mx-auto;
     }
     .services__header .section__uniqueText-2{
-        @apply text-left;
+        @apply text-center lg:text-left;
     }
     .services__header .comman__text{
-        @apply text-left ;
+        @apply lg:text-left ;
     }
     .services__card__wrapper{
-        @apply grid sm:grid-cols-2 gap-5 sm:gap-8 md:gap-14 ;
+        @apply grid sm:grid-cols-2 gap-5 sm:gap-8 md:gap-14 mt-7;
     }
     .service__card{
         @apply flex items-start gap-5 md:gap-8;
     }
     .services .section__title{
-        @apply sm:w-8/12 sm:mx-auto lg:w-full lg:text-left mb-5;
+        @apply sm:w-11/12 sm:mx-auto md:w-7/12 lg:w-full lg:text-left mb-5;
     }
     .services__header p{
-        @apply text-center ;
+        @apply text-center lg:text-left md:w-10/12 mx-auto lg:w-full;
     }
     .service__card p{
         @apply 
